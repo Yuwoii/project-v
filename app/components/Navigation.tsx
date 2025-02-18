@@ -44,7 +44,6 @@ export default function Navigation() {
               ['Home', '/'],
               ['Menu', '/menu'],
               ['Our Story', '/story'],
-              ['Reservations', '/reservations'],
               ['Contact', '/contact'],
             ].map(([title, url]) => (
               <Link
@@ -57,7 +56,8 @@ export default function Navigation() {
                 {title}
               </Link>
             ))}
-            <button
+            <Link
+              href="/reservations"
               className={`px-6 py-2 border-2 rounded-full font-vietnam text-sm
               transition-all hover:bg-[--color-secondary] hover:border-[--color-secondary]
               ${isScrolled 
@@ -65,7 +65,7 @@ export default function Navigation() {
                 : 'border-white text-white'}`}
             >
               Book a Table
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -93,7 +93,6 @@ export default function Navigation() {
             ['Home', '/'],
             ['Menu', '/menu'],
             ['Our Story', '/story'],
-            ['Reservations', '/reservations'],
             ['Contact', '/contact'],
           ].map(([title, url]) => (
             <Link
@@ -105,13 +104,15 @@ export default function Navigation() {
             </Link>
           ))}
           <div className="px-3 py-3">
-            <button className="w-full px-6 py-2 border-2 border-[--color-primary] 
-              text-[--color-primary] rounded-full font-vietnam text-sm
-              transition-all hover:bg-[--color-secondary] hover:text-white 
-              hover:border-[--color-secondary]"
+            <Link
+              href="/reservations"
+              className="block w-full px-6 py-2 border-2 border-[--color-primary] 
+                text-[--color-primary] rounded-full font-vietnam text-sm
+                transition-all hover:bg-[--color-secondary] hover:text-white 
+                hover:border-[--color-secondary]"
             >
               Book a Table
-            </button>
+            </Link>
           </div>
         </div>
       </div>
